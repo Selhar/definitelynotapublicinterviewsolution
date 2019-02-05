@@ -1,0 +1,263 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`With Snapshot Testing App shows "Hello world!" 1`] = `
+<div
+  className="grommet grommetux-app grommetux-app--centered"
+  lang="en-US"
+>
+  <div
+    className="grommetux-box grommetux-box--full-vertical grommetux-box--full-responsive grommetux-box--direction-column grommetux-box--justify-center grommetux-box--align-center grommetux-box--responsive grommetux-box--pad-vertical-large"
+    id={undefined}
+    onClick={undefined}
+    role={undefined}
+    style={Object {}}
+    tabIndex={undefined}
+  >
+    <img
+      className="grommetux-image grommetux-image--medium sc-bdVaJa dqaRaO"
+      src="/static/logo.png"
+    />
+    <div
+      className="grommetux-headline"
+    >
+      Welcome to the 
+      <b>
+        TallerChat
+      </b>
+       
+      <svg
+        aria-label="chat"
+        className="grommetux-control-icon grommetux-control-icon-chat grommetux-control-icon--large grommetux-control-icon--responsive grommetux-color-index-critical"
+        height="24px"
+        role="img"
+        version="1.1"
+        viewBox="0 0 24 24"
+        width="24px"
+      >
+        <path
+          d="M9,7 L9,1 L23,1 L23,11 L20,11 L20,16 L15,12 M1,7 L15,7 L15,18 L9,18 L4,22 L4,18 L1,18 L1,7 Z"
+          fill="none"
+          stroke="#000"
+          strokeWidth="2"
+        />
+      </svg>
+    </div>
+    <form
+      className="grommetux-form grommetux-form--pad-medium"
+      onSubmit={[Function]}
+    >
+      <h2
+        className="grommetux-heading grommetux-heading--strong grommetux-heading--align-center"
+      >
+        Sign In
+      </h2>
+      <fieldset>
+        <div
+          className="grommetux-form-field grommetux-form-field--size-medium"
+          onClick={[Function]}
+        >
+          <label
+            className="grommetux-form-field__label"
+            htmlFor={undefined}
+          >
+            Username
+          </label>
+          <span
+            className="grommetux-form-field__contents"
+          >
+            <input
+              autoComplete="off"
+              autoFocus={true}
+              className="grommetux-text-input grommetux-input"
+              defaultValue={undefined}
+              disabled={false}
+              meta={
+                Object {
+                  "active": false,
+                  "data": Object {},
+                  "dirty": false,
+                  "dirtySinceLastSubmit": false,
+                  "error": "Required",
+                  "initial": undefined,
+                  "invalid": true,
+                  "length": undefined,
+                  "pristine": true,
+                  "submitError": undefined,
+                  "submitFailed": false,
+                  "submitSucceeded": false,
+                  "touched": false,
+                  "valid": false,
+                  "visited": false,
+                }
+              }
+              name="name"
+              onBlur={[Function]}
+              onChange={[Function]}
+              onFocus={[Function]}
+              onKeyDown={[Function]}
+              placeholder={undefined}
+              render={undefined}
+              type="text"
+              value=""
+            />
+          </span>
+        </div>
+        <div
+          className="grommetux-form-field grommetux-form-field--size-medium"
+          onClick={[Function]}
+        >
+          <label
+            className="grommetux-form-field__label"
+            htmlFor={undefined}
+          >
+            Password
+          </label>
+          <span
+            className="grommetux-form-field__contents"
+          >
+            <input
+              autoComplete="off"
+              className="grommetux-text-input grommetux-input"
+              defaultValue={undefined}
+              disabled={false}
+              meta={
+                Object {
+                  "active": false,
+                  "data": Object {},
+                  "dirty": false,
+                  "dirtySinceLastSubmit": false,
+                  "error": "Required",
+                  "initial": undefined,
+                  "invalid": true,
+                  "length": undefined,
+                  "pristine": true,
+                  "submitError": undefined,
+                  "submitFailed": false,
+                  "submitSucceeded": false,
+                  "touched": false,
+                  "valid": false,
+                  "visited": false,
+                }
+              }
+              name="password"
+              onBlur={[Function]}
+              onChange={[Function]}
+              onFocus={[Function]}
+              onKeyDown={[Function]}
+              placeholder={undefined}
+              render={undefined}
+              type="password"
+              value=""
+            />
+          </span>
+        </div>
+      </fieldset>
+      <div
+        className="grommetux-box grommetux-box--direction-column grommetux-box--responsive grommetux-box--pad-none grommetux-box--margin-bottom-medium"
+        id={undefined}
+        onClick={undefined}
+        role={undefined}
+        style={Object {}}
+        tabIndex={undefined}
+      >
+        <label
+          className="grommetux-check-box"
+          htmlFor={undefined}
+        >
+          <span>
+            <input
+              checked={undefined}
+              className="grommetux-check-box__input"
+              disabled={false}
+              meta={
+                Object {
+                  "active": false,
+                  "data": Object {},
+                  "dirty": false,
+                  "dirtySinceLastSubmit": false,
+                  "error": undefined,
+                  "initial": undefined,
+                  "invalid": false,
+                  "length": undefined,
+                  "pristine": true,
+                  "submitError": undefined,
+                  "submitFailed": false,
+                  "submitSucceeded": false,
+                  "touched": false,
+                  "valid": true,
+                  "visited": false,
+                }
+              }
+              name="register"
+              onBlur={[Function]}
+              onChange={[Function]}
+              onFocus={[Function]}
+              render={undefined}
+              tabIndex="0"
+              type="checkbox"
+              value=""
+            />
+            <span
+              className="grommetux-check-box__control"
+            >
+              <svg
+                className="grommetux-check-box__control-check"
+                preserveAspectRatio="xMidYMid meet"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  d="M6,11.3 L10.3,16 L18,6.2"
+                  fill="none"
+                />
+              </svg>
+            </span>
+          </span>
+          <span
+            className="grommetux-check-box__label"
+          >
+            I'm new here
+          </span>
+        </label>
+      </div>
+      <footer
+        className="grommetux-box grommetux-box--direction-column grommetux-box--align-center grommetux-box--pad-between-medium grommetux-footer grommetux-footer--small"
+        id={undefined}
+        onClick={undefined}
+        role={undefined}
+        style={Object {}}
+        tabIndex={undefined}
+      >
+        <button
+          aria-label={undefined}
+          className="grommetux-button grommetux-button--primary grommetux-button--fill"
+          disabled={false}
+          href={undefined}
+          onBlur={[Function]}
+          onClick={undefined}
+          onFocus={[Function]}
+          onMouseDown={[Function]}
+          onMouseUp={[Function]}
+          type="submit"
+        >
+          <span
+            className="grommetux-button__label"
+          >
+            Log In
+          </span>
+        </button>
+      </footer>
+    </form>
+  </div>
+  <span
+    style={
+      Object {
+        "display": "none",
+      }
+    }
+  />
+  <div
+    aria-live="polite"
+    className="grommetux-app__announcer"
+  />
+</div>
+`;
