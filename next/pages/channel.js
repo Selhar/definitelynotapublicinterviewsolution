@@ -91,8 +91,8 @@ const ChatRoom = ({ url, url: { query: { channel = 'general' } } }) => (
                     <Menu primary>
                       { channels.map(({ name }) => (
                         <Link key={ name }
-                              prefetch href={ `/messages/${name}` }
-                              as={`/messages/${name}`}>
+                              prefetch href={ `/channel?channel=${ name }` }
+                              as={`/messages/${ name }`}>
                           <Anchor className={ channel === name ? 'active' : '' }>
                             # <b>{ name }</b>
                           </Anchor>
