@@ -49,6 +49,12 @@ const AddChannelButton = styled(Button)`
   margin-left: auto;
 `
 
+const ChatBox = styled(Box)`
+  flex-basis: auto;
+  overflow-y: scroll;
+  height: 1px;
+`
+
 const LoadingComponent = () => (
   <Box full='vertical' justify='center' align='center'>
     <HashLoader color='#e02438' loading />
@@ -68,7 +74,7 @@ const ChatRoom = ({ url, url: { query: { channel = 'general' } } }) => (
         { ({ loading, channels }) => (
           (loading && !channels.length) ? <LoadingComponent /> : (
             <App centered={ false }>
-              <Split fixed flex='right'>
+              <Split fixed={ false } flex='right'>
                 <Sidebar colorIndex='neutral-1'>
                   <Header pad='medium'>
                     <Title>
@@ -119,7 +125,7 @@ const ChatRoom = ({ url, url: { query: { channel = 'general' } } }) => (
                           <Button icon={ <RefreshIcon /> } onClick={ () => refetch() } />
                         </StyledRoomHeader>
 
-                        <Box pad='medium' flex='grow'>
+                        <ChatBox pad='medium' flex='grow'>
                           { loading ? 'Loading...' : (
                             messages.length === 0 ? 'No one talking here yet :(' : (
                               messages.map(({ id, author, message }) => (
@@ -130,7 +136,7 @@ const ChatRoom = ({ url, url: { query: { channel = 'general' } } }) => (
                               ))
                             )
                           ) }
-                        </Box>
+                        </ChatBox>
 
                         <Box pad='medium' direction='column'>
                           { user && user.uid ? (
