@@ -28,7 +28,21 @@ const StyledMessage = styled(Paragraph)`
 class MessageHistory extends React.Component {
   constructor(props){
     super(props);
+    this.chatBottom = React.createRef();
   }
+
+  componentDidMount(){
+    this.scrollToBottom();
+  }
+
+  componentDidUpdate(){
+    this.scrollToBottom();
+  }
+
+  scrollToBottom(){
+    this.chatBottom.current.scrollIntoView({ behavior: "smooth" });
+  }
+
   render(){
     const { messages } = this.props;
     return(
@@ -42,6 +56,7 @@ class MessageHistory extends React.Component {
             ))
           )
         }
+        <div ref={this.chatBottom} />
       </ChatBox>
     )
   };
