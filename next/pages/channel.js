@@ -23,22 +23,13 @@ import Box from 'grommet/components/Box'
 import Menu from 'grommet/components/Menu'
 import Anchor from 'grommet/components/Anchor'
 import Button from 'grommet/components/Button'
-import Paragraph from 'grommet/components/Paragraph'
-import Label from 'grommet/components/Label'
 
 import bootstrap from 'app/lib/bootstrap'
 import TextInput from 'app/modules/form/components/TextInput'
+import MessageHistory from 'app/components/MessageHistory'
 
 const StyledRoomHeader = styled(Header)`
   border-bottom: 1px solid #ddd;
-`
-
-const StyledMessage = styled(Paragraph)`
-  margin: 0;
-`
-
-const StyledAuthor = styled(Label)`
-  margin: 0;
 `
 
 const StyledTextInput = styled(TextInput)`
@@ -47,12 +38,6 @@ const StyledTextInput = styled(TextInput)`
 
 const AddChannelButton = styled(Button)`
   margin-left: auto;
-`
-
-const ChatBox = styled(Box)`
-  flex-basis: auto;
-  overflow-y: scroll;
-  height: 1px;
 `
 
 const LoadingComponent = () => (
@@ -71,6 +56,7 @@ class ChatRoom extends React.Component {
   constructor(props){
     super(props);
   }
+
   render(){
     const { url, url: { query: { channel = 'general' } } } = this.props;
     return(
@@ -131,19 +117,10 @@ class ChatRoom extends React.Component {
                               <Button icon={ <RefreshIcon /> } onClick={ () => refetch() } />
                             </StyledRoomHeader>
 
-                            <ChatBox pad='medium' flex='grow'>
-                              { loading ? 'Loading...' : (
-                                messages.length === 0 ? 'No one talking here yet :(' : (
-                                  messages.map(({ id, author, message }) => (
-                                    <Box key={ id } pad='small' credit={ author }>
-                                      <StyledAuthor>{ author }</StyledAuthor>
-                                      <StyledMessage>{ message }</StyledMessage>
-                                    </Box>
-                                  ))
-                                )
-                              ) }
-                            </ChatBox>
-
+                            {  loading ? 'Loading...' : (
+                              <MessageHistory messages={ messages } />
+                            )
+                            }
                             <Box pad='medium' direction='column'>
                               { user && user.uid ? (
                                 <NewMessageContainer
