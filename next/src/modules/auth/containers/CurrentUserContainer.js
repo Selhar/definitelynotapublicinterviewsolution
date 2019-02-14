@@ -21,13 +21,16 @@ let refetchedOnClient = false
 const CurrentUserContainer = ({ children }) => (
   <Query query={ query }>
     { ({ ...result, loading, refetch, data }) => {
-      // Force a refetch on the client side to make sure
-      // the cached SSR anonymous user is replaced, in case
-      // the user is already logged in..
+      // Makes sure current user data is accurate by refetching
+      // Then, if user isn't logged in redirect her to "/"
 
-      if (!loading && !refetchedOnClient && isClient()) {
-        refetchedOnClient = true
-        refetch()
+      if (!loading && isClient()) {
+        if(!refetchedOnClient){
+          refetchedOnClient = true
+          refetch()
+        } else if (data.user.uid === null){
+            Router.replace("/")
+        }
       }
 
       return children({ ...result, user: data.user })
